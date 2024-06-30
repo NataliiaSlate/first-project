@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="icon" href="images/logo.png">
+<link rel="icon" href="images/logo.png" />
+<link rel="stylesheet" href="style.css" />
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nataliia's Portfolio</title>
 </head>
-<body style="background-color: #FAF0E6;">
-    <section>
-            <h1>AQA Engineer and Full-stack Developer (in future)</h1>
-            <h2>Never say never</h2>
-            <img src="images/image.png" alt="Ups, the image is broken">
+
+<body>
+    <section class="centered-text">
+        <h1>AQA Engineer and Full-stack Developer (in future)</h1>
+        <h2>Never say never</h2>
+        <img src="images/image.png" alt="Ups, the image is broken">
     </section>
     <section>
         <div>
@@ -23,23 +25,22 @@
                 transitioned to a general QA role, and have now become an AQA.
                 Nowadays, I work with end-to-end testing using the Playwright framework and TypeScript,
                 API testing, and manual testing of web and mobile platforms.
-                <span style="color: #fe5a75;">I love what I do.</span>
+                <span class="color-text">I love what I do.</span>
             <p>
         </div>
     </section>
     <section>
-
         <div>
             <h2>Set of my skills</h2>
         </div>
         <div>
             <table>
-                <tr style="background-color: #644f88; color: #fe5a75;">
+                <tr class="main-row color-text">
                     <th>Manual Mobile and Web App QA</th>
                     <th>API QA</th>
                     <th>AQA</th>
                 </tr>
-                <tr style="background-color: #b4b0fa">
+                <tr class="table-section-header">
                     <th>Testing Fundamentals</th>
                     <th>API Testing Fundamentals</th>
                     <th>Automation Frameworks</th>
@@ -67,7 +68,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr style="background-color: #b4b0fa">
+                <tr class="table-section-header">
                     <th>Mobile Testing</th>
                     <th>Test Design and Execution</th>
                     <th>TypeScript</th>
@@ -93,7 +94,7 @@
                         </ul>
                     </td>
                 </tr>
-                <tr style="background-color: #b4b0fa">
+                <tr class="table-section-header">
                     <th>Web Testing</th>
                     <th>Scripting and Automation</th>
                     <th>Test Design and Execution</th>
@@ -120,22 +121,105 @@
             </table>
         </div>
     </section>
+    <form class="about-you-form">
+        <section>
+            <fieldset>
+                <legend><img class="resized-image" src="images/all_about_you.png" alt="Oops, the image is broken">
+                </legend>
+                <h2 id="about-you-header">I’m excited to learn about you and your projects. Ready to share some info?</h2>
+
+                <label for="name">Your name is</label>
+                <input type="text" id="name" name="name" placeholder="Nataliia" minlength="2" maxlength="35"
+                    required /><br /><br />
+
+                <label for="insta_nickname">Your insta nickname is</label>
+                <input type="text" id="insta_nickname" name="insta_nickname" placeholder="@n_solotva" minlength="2"
+                    maxlength="70" /><br /><br />
+
+                <label for="insta_password">Your Instagram password is</label>
+                <input type="password" id="insta_password" name="insta_password"
+                    placeholder="I'm kidding! Do not enter it!" /><br /><br />
+
+                <fieldset>
+                    <legend>Choose preferred language:</legend>
+                    <input type="radio" id="english" name="language" value="English" />
+                    <label for="english">English</label>
+                    <input type="radio" id="french" name="language" value="French" />
+                    <label for="french">French</label>
+                    <input type="radio" id="ukrainian" name="language" value="Ukrainian" />
+                    <label for="ukrainian">Ukrainian</label>
+                    <input type="radio" id="other" name="language" value="Other"
+                        title="For any other language, I'll use a translator" />
+                    <label for="other">Other</label>
+                </fieldset><br />
+
+                <fieldset>
+                    <legend>Choose the language you cannot live without:</legend>
+                    <input type="checkbox" id="css" name="tech_language" value="CSS" />
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="html" name="tech_language" value="HTML" />
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="js" name="tech_language" value="JavaScript" />
+                    <label for="js">JavaScript</label>
+                </fieldset><br />
+
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" placeholder="your@email.example" maxlength="255"
+                    required /><br /><br />
+
+                <label for="country">Choose your country:</label>
+                <select id="country" name="country">
+                    <option value="">--Please choose your country--</option>
+                    <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="USA">USA</option>
+                    <option value="Other country">Other country</option>
+                </select><br /><br />
+
+                <label for="phone">Enter your phone number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. +1234567890"
+                    pattern="^\+?\d{0,13}" /><br /><br />
+
+                <label for="birthdate">Select your birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate" /><br /><br />
+
+                <label for="file">Select an image with which I can associate you:</label>
+                <input type="file" id="file" name="file" accept="image/*" /><br /><br />
+
+                <label for="favcolor">Select or pick your favorite color</label>
+                <input type="color" id="favcolor" name="color" value="#fd5974" required
+                    title="Choose your favorite color" /><br /><br />
+
+                <label for="github_url">Could you share your GitHub url?</label>
+                <input type="url" id="github_url" name="github_url"
+                    placeholder="https://github.com/NataliiaSlate" /><br /><br />
+
+                <label for="mark">How do you like the website so far? (0 to 10)</label>
+                <input type="number" id="mark" name="mark" min="0" max="10" step="2" required><br /><br />
+
+                <section>
+                    <input type="submit" id="submit" class="submit-button" value="Submit form ❤️">
+                    <input type="reset" id="reset" class="reset-button" value="Reset form 😱"><br /><br />
+                    <input type="button" id="send_hug" name="send_hug" class="hug-button"
+                        onclick="alert('Thank you for the hug! I\'m hugging you back 🤗')" value="Send hug 🤗">
+                </section>
+            </fieldset>
+        </section><br>
+    </form>
     <footer>
-        <div style="background-color: #fe5a75;">
-            <div>
-                <p>
+        <div class="footer">
+            <div class="centered-text">
+                <p id="motivation">
                     <br>Embrace Challenges, Unlock Potential.<br>
                 </p>
             </div>
             <div>
                 <table>
                     <tr>
-                        <td> <a href="mailto:nataliia.solotva@gmail.com" target="_blank"
-                                style="color: #ffffff;">Gmail</a></td>
+                        <td> <a href="mailto:nataliia.solotva@gmail.com" target="_blank" id="link">Gmail</a></td>
                         <td> <a href="https://www.linkedin.com/in/nataliia-solotva/" target="_blank"
-                                style="color: #ffffff;">LinkedIn</a></td>
-                        <td> <a href="https://github.com/NataliiaSolotva" target="_blank"
-                                style="color: #ffffff;">GitHub</a></td>
+                                id="link">LinkedIn</a></td>
+                        <td> <a href="https://github.com/NataliiaSolotva" target="_blank" id="link">GitHub</a></td>
                     </tr>
                 </table>
             </div>
