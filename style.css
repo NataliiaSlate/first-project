@@ -1,0 +1,82 @@
+body {
+    background: linear-gradient(#ffffff, #faf0e6);
+}
+
+.color-text {
+    color: #fe5a75;
+}
+
+.main-row {
+   background-color: #644f88;
+}
+
+.table-section-header {
+    background-color: #b4b0fa;
+}
+
+.footer,  #about-you-header, #link {
+    background-color: #fe5a75;
+    color: #ffffff
+}
+
+.resized-image {
+    width: 120px;
+    height: auto;
+}
+
+.centered-text, h2 {
+    text-align: center;
+}
+
+.about-you-form {
+    background-color: #ececf8;
+}
+
+#motivation {
+    color: #000000
+}
+
+.reset-button {
+    background-color: #ec0b0b;
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+    background-color: #ab0707;
+}
+
+.submit-button {
+    background-color: #1ebf1c;
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #189116;
+}
+
+.hug-button {
+    background-color: #fe5a75;
+    color: #ffffff; 
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hug-button:hover {
+    background-color: #644f88;
+}
