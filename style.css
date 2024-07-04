@@ -1,26 +1,109 @@
 body {
-    background: linear-gradient(#ffffff, #faf0e6);
+    background-image: url(images/background-image.jpg);
+    background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+}
+
+.arrow-container, .centered-image-conteiner {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.down-arrow {
+    width: auto;
+    max-height: 50px;
 }
 
 .color-text {
     color: #fe5a75;
+    background-color: rgba(236, 236, 248, 0.4);
 }
 
-.main-row {
-   background-color: #644f88;
+.italic {
+    font-style: italic;
+}
+
+/* header styles */
+.header {
+    text-align: center;
+    background-color: rgba(254, 90, 117, 0.3);
+    padding: 10px 0; 
+}
+/* end of header styles */
+
+/* self presentations section styles */
+.self-presentation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    margin: 0;
+}
+
+.girl-full-stack {
+    max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+}
+
+.right-text {
+    flex: 1;
+    font-size: 20px;
+    letter-spacing: 5px;
+    margin-bottom: 5%;
+}
+/* end of self presentations section styles */
+
+/* table styles */
+.table {
+    padding: 20px 20px 60px 20px;
+}
+
+.table td, .table th {
+    border: 1px outset rgba(254, 90, 117, 1);
 }
 
 .table-section-header {
     background-color: #b4b0fa;
+    font-style: oblique;
+    font-size: 22px;
 }
 
-.footer,  #about-you-header, #link {
-    background-color: #fe5a75;
-    color: #ffffff
+.main-row {
+    background-color: #644f88;
+    word-spacing: 10px;
+    font-style: oblique;
+    font-size: 20px;
+}
+/* end of table styles */
+
+/* about visitor section style */
+.about-you-form {
+    background: rgba(236, 236, 248, 0.3);
+    font-size: 18px;
+    border-radius: 10%;
+    border-style: dotted;
+    border-color: #fe5a75;
 }
 
-.resized-image {
-    width: 120px;
+fieldset {
+    border: none;
+}
+
+#about-you-header {
+    background-color: rgba(255, 73, 103, 0.3);
+    color: rgba(255, 255, 255, 1);
+    letter-spacing: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-style: none dotted dotted;
+}
+
+.chat {
+    width: 80px;
     height: auto;
 }
 
@@ -28,23 +111,25 @@ body {
     text-align: center;
 }
 
-.about-you-form {
-    background-color: #ececf8;
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
-#motivation {
-    color: #000000
-}
-
-.reset-button {
-    background-color: #ec0b0b;
-    color: #ffffff; 
+.reset-button, .submit-button, .hug-button {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: 0 20px;
+}
+
+.reset-button {
+    background-color: #ec0b0b;
+    color: #ffffff;
 }
 
 .reset-button:hover {
@@ -53,13 +138,7 @@ body {
 
 .submit-button {
     background-color: #1ebf1c;
-    color: #ffffff; 
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #ffffff;
 }
 
 .submit-button:hover {
@@ -67,16 +146,42 @@ body {
 }
 
 .hug-button {
-    background-color: #fe5a75;
-    color: #ffffff; 
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: rgba(254, 90, 117, 1);
+    color: #ffffff;
 }
 
 .hug-button:hover {
     background-color: #644f88;
 }
+/* end of about visitor section style */
+
+/* footer styles */
+.footer {
+    background-color: rgba(254, 90, 117, 1);
+    text-align: center;
+    letter-spacing: 5px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+#motivation {
+    color: #000000;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.footer-link {
+    margin: 10px;
+    padding: 0;
+}
+
+.footer-link img {
+    width: 40px;
+    height: auto;
+    transition: transform 0.5s;
+}
+
+.footer-link img:hover {
+    transform: scale(1.2);
+}
+/* end of footer styles */

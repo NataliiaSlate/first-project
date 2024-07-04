@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<link rel="icon" href="images/logo.png" />
-<link rel="stylesheet" href="style.css" />
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nataliia's Portfolio</title>
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <section class="centered-text">
-        <h1>AQA Engineer and Full-stack Developer (in future)</h1>
-        <h2>Never say never</h2>
-        <img src="images/image.png" alt="Ups, the image is broken">
-    </section>
+    <header class="header">
+        <h1>I'm Nataliia, and welcome to my space!</h1>
+    </header>
     <section>
-        <div>
-            <h2>I'm Nataliia, and welcome to my space!</h2>
-            <p>
+        <div class="self-presentation">
+            <img src="images/image.png" alt="Ups, the image is broken" class="girl-full-stack">
+            <p class="right-text">
                 I began my IT career two years ago as a Manual QA engineer student.
                 Since then, I've worked as a manual QA on a mobile project,
                 transitioned to a general QA role, and have now become an AQA.
                 Nowadays, I work with end-to-end testing using the Playwright framework and TypeScript,
                 API testing, and manual testing of web and mobile platforms.
                 <span class="color-text">I love what I do.</span>
-            <p>
+            </p></br>
         </div>
     </section>
+
+    <section>
+        <div class="arrow-container">
+            <img src="images/down-arrow.png" alt="Ups, the image is broken" class="down-arrow">
+        </div>
+    </section>
+
     <section>
         <div>
-            <h2>Set of my skills</h2>
+            <h2 class="centered-text italic">Set of my skills</h2>
         </div>
         <div>
-            <table>
+            <table class="table">
                 <tr class="main-row color-text">
                     <th>Manual Mobile and Web App QA</th>
                     <th>API QA</th>
@@ -49,8 +53,7 @@
                     <td>
                         <ul>
                             <li>Knowledge of SDLC and STLC</li>
-                            <li>Proficiency in writing and working with test documentation (test cases, checklists)
-                            </li>
+                            <li>Proficiency in writing and working with test documentation (test cases, checklists)</li>
                             <li>Understanding of different types of testing: functional, non-functional</li>
                         </ul>
                     </td>
@@ -121,12 +124,21 @@
             </table>
         </div>
     </section>
+
+    <section>
+        <div class="arrow-container">
+            <img src="images/down-arrow.png" alt="Ups, the image is broken" class="down-arrow">
+        </div>
+    </section>
+
     <form class="about-you-form">
         <section>
             <fieldset>
-                <legend><img class="resized-image" src="images/all_about_you.png" alt="Oops, the image is broken">
+                <legend id="about-you-header">
+                    <img class="chat" src="images/speak.png" alt="Oops, the image is broken"><br> I’m excited to learn
+                    about you and your projects.<br> Ready
+                    to share some info?
                 </legend>
-                <h2 id="about-you-header">I’m excited to learn about you and your projects. Ready to share some info?</h2>
 
                 <label for="name">Your name is</label>
                 <input type="text" id="name" name="name" placeholder="Nataliia" minlength="2" maxlength="35"
@@ -140,8 +152,8 @@
                 <input type="password" id="insta_password" name="insta_password"
                     placeholder="I'm kidding! Do not enter it!" /><br /><br />
 
-                <fieldset>
-                    <legend>Choose preferred language:</legend>
+                <label for="languages"> Choose preferred language:</label><br><br>
+                <div id="languages">
                     <input type="radio" id="english" name="language" value="English" />
                     <label for="english">English</label>
                     <input type="radio" id="french" name="language" value="French" />
@@ -151,17 +163,17 @@
                     <input type="radio" id="other" name="language" value="Other"
                         title="For any other language, I'll use a translator" />
                     <label for="other">Other</label>
-                </fieldset><br />
+                </div><br />
 
-                <fieldset>
-                    <legend>Choose the language you cannot live without:</legend>
+                <label for="devlenguages">Choose the language you cannot live without:</label><br><br>
+                <div id="devlenguages">
                     <input type="checkbox" id="css" name="tech_language" value="CSS" />
                     <label for="css">CSS</label>
                     <input type="checkbox" id="html" name="tech_language" value="HTML" />
                     <label for="html">HTML</label>
                     <input type="checkbox" id="js" name="tech_language" value="JavaScript" />
                     <label for="js">JavaScript</label>
-                </fieldset><br />
+                </div><br />
 
                 <label for="email">Enter your email:</label>
                 <input type="email" id="email" name="email" placeholder="your@email.example" maxlength="255"
@@ -197,7 +209,7 @@
                 <label for="mark">How do you like the website so far? (0 to 10)</label>
                 <input type="number" id="mark" name="mark" min="0" max="10" step="2" required><br /><br />
 
-                <section>
+                <section class="buttons">
                     <input type="submit" id="submit" class="submit-button" value="Submit form ❤️">
                     <input type="reset" id="reset" class="reset-button" value="Reset form 😱"><br /><br />
                     <input type="button" id="send_hug" name="send_hug" class="hug-button"
@@ -214,14 +226,15 @@
                 </p>
             </div>
             <div>
-                <table>
-                    <tr>
-                        <td> <a href="mailto:nataliia.solotva@gmail.com" target="_blank" id="link">Gmail</a></td>
-                        <td> <a href="https://www.linkedin.com/in/nataliia-solotva/" target="_blank"
-                                id="link">LinkedIn</a></td>
-                        <td> <a href="https://github.com/NataliiaSolotva" target="_blank" id="link">GitHub</a></td>
-                    </tr>
-                </table>
+                <a href="mailto:nataliia.solotva@gmail.com" target="_blank" class="footer-link">
+                    <img src="images/mail.png" alt="Ups, Gmail link is broken">
+                </a>
+                <a href="https://www.linkedin.com/in/nataliia-solotva/" target="_blank" class="footer-link">
+                    <img src="images/business.png" alt="Ups, LinkedIn link is broken">
+                </a>
+                <a href="https://github.com/NataliiaSolotva" target="_blank" class="footer-link">
+                    <img src="images/github.png" alt="Ups, GitHub link is broken">
+                </a>
             </div>
         </div>
     </footer>
