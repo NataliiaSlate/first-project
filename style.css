@@ -142,9 +142,7 @@ body {
     list-style: none;
     padding: 0;
     align-content: space-between;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
+    max-height: 400px;
 }
 
 .skill {
