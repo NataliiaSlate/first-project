@@ -231,6 +231,11 @@ body {
     gap: 20px
 }
 
+.about-you__field-label {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
 .about-you__text-field {
     width: calc(100% - 22px);
     padding: 10px;
