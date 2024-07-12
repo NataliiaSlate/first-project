@@ -12,232 +12,306 @@
 <body>
     <header class="header">
         <a href="index.html">
-            <img src="images/sheep.png" alt="Ups, the image is broken" class="logo_image">
+            <img src="images/sheep.png" alt="Ups, the image is broken" class="header__logo-image">
         </a>
-        <nav class="nav">
-            <ul class="nav__list">
+        <nav class="header__nav">
+            <ul class="header__list">
                 <li>
-                    <a class="nav__link" href="#about_me">About me</a>
+                    <a class="header__link" href="#about_me">About me</a>
                 </li>
                 <li>
-                    <a class="nav__link" href="#my_skills">My skills</a>
+                    <a class="header__link" href="#my_skills">My skills</a>
                 </li>
                 <li>
-                    <a class="nav__link" href="#about_you_form">About you</a>
+                    <a class="header__link" href="#about_you_form">About you</a>
                 </li>
                 <li>
-                    <a class="nav__link" href="#contact_me">Contact me</a>
+                    <a class="header__link" href="#contact_me">Contact me</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="about_me">
-            <div class="self_presentation">
-                <img src="images/image.png" alt="Ups, the image is broken" class="girl-full-stack">
-                <p class="short_description">
-                    I began my IT career two years ago as a Manual QA engineer student.
-                    Since then, I've worked as a manual QA on a mobile project,
-                    transitioned to a general QA role, and have now become an AQA.
-                    Nowadays, I work with end-to-end testing using the Playwright framework and TypeScript,
-                    API testing, and manual testing of web and mobile platforms.
-                    <span class="color-text">I love what I do.</span>
-                </p></br>
+            <div class="about-me">
+                <img src="images/image.png" alt="Ups, the image is broken" class="about-me__image">
+                <div class="about-me__description">
+                    <h1 class="about-me__header">Hi, I'm Nataliia. Nice to see you in my place! Enjoy!</h1>
+                    <p class="about-me__paragraph">
+                        I began my IT career two years ago as a Manual QA engineer student.
+                        Since then, I've worked as a manual QA on a mobile project,
+                        transitioned to a general QA role, and have now become an AQA.
+                        Nowadays, I work with end-to-end testing using the Playwright framework and TypeScript,
+                        API testing, and manual testing of web and mobile platforms.
+                        <span class="color-text">I love what I do.</span>
+                    </p></br>
+                </div>
             </div>
         </section>
 
         <section>
-            <div class="arrow-container">
-                <img src="images/down-arrow.png" alt="Ups, the image is broken" class="down-arrow">
+            <div class="arrow">
+                <img src="images/down-arrow.png" alt="Ups, the image is broken" class="arrow__image">
             </div>
         </section>
 
-        <section id="my_skills">
-            <h2 class="set_of_skills_header">Set of my skills</h2>
-            <div class="columns">
-                <div class="column">
-                    <div class="table_image_container">
-                        <img src="images/qa.png" alt="Ups, QA image is not available" class="table_image">
+        <section id="my_skills" class="skills">
+            <h2 class="skills__header">Set of my skills</h2>
+            <div class="skills__tabel">
+                <div class="skills__column">
+                    <div class="skills__image-container">
+                        <img src="images/qa.png" alt="Ups, QA image is not available" class="skills__image">
                     </div>
-                    <h2 class="column_name">Manual Mobile and Web App QA</h2>
-                    <h3 class="skill_items_set">Testing Fundamentals</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Knowledge of SDLC and STLC</li>
-                        <li class="skill">Proficiency in writing and working with test documentation (test cases,
-                            checklists)</li>
-                        <li class="skill">Understanding of different types of testing: functional, non-functional</li>
-                    </ul>
-                    <h3 class="skill_items_set">Mobile Testing</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Familiarity with testing on both Android and iOS platforms</li>
-                        <li class="skill">Knowledge of mobile-specific testing concerns (screen sizes, battery usage,
-                            network conditions)</li>
-                    </ul>
-                    <h3 class="skill_items_set">Web Testing</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Experience in designing, writing, and executing automated test cases</li>
-                        <li class="skill">Understanding of responsive design and testing on various devices</li>
-                    </ul>
+                    <h2 class="skills__column-name">Manual QA</h2>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Testing Fundamentals</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Knowledge of SDLC and STLC</li>
+                            <li class="skills__skill">Proficiency in writing and working with test documentation (test
+                                cases,
+                                checklists)</li>
+                            <li class="skills__skill">Understanding of different types of testing: functional,
+                                non-functional
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Mobile Testing</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skil">Familiarity with testing on both Android and iOS platforms</li>
+                            <li class="skill__skill">Knowledge of mobile-specific testing concerns (screen sizes,
+                                battery
+                                usage,
+                                network conditions)</li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Web Testing</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Experience in designing, writing, and executing automated test
+                                cases</li>
+                            <li class="skills__skill">Understanding of responsive design and testing on various devices
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="column">
-                    <div class="table_image_container">
-                        <img src="images/application.png" alt="Ups, API image is not available" class="table_image">
+                <div class="skills__column">
+                    <div class="skills__image-container">
+                        <img src="images/application.png" alt="Ups, API image is not available" class="skills__image">
                     </div>
-                    <h2 class="column_name">API QA</h2>
-                    <h3 class="skill_items_set">API Testing Fundamentals</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Understanding of RESTful and SOAP APIs</li>
-                        <li class="skill">Knowledge of HTTP methods (GET, POST, PUT, PATCH, DELETE)</li>
-                        <li class="skill">Familiarity with API documentation tools (Swagger, Postman)</li>
-                    </ul>
-                    <h3 class="skill_items_set">Test Design and Execution</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Ability to design and execute API test cases</li>
-                        <li class="skill">Understanding of request/response validation, status codes, and error handling
-                        </li>
-                    </ul>
-                    <h3 class="skill_items_set">Scripting and Automation</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Experience with creating and maintaining automated test scripts</li>
-                    </ul>
+                    <h2 class="skills__column-name">API QA</h2>
+                    <div class="skills__item">
+                        <h3 class="skills__set">API Testing Fundamentals</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Understanding of RESTful and SOAP APIs</li>
+                            <li class="skills__skill">Knowledge of HTTP methods (GET, POST, PUT, PATCH, DELETE)</li>
+                            <li class="skills__skill">Familiarity with API documentation tools (Swagger, Postman)</li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Test Design and Execution</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Ability to design and execute API test cases</li>
+                            <li class="skills__skill">Understanding of request/response validation, status codes, and
+                                error
+                                handling
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Scripting and Automation</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Experience with creating and maintaining automated test scripts
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="column">
-                    <div class="table_image_container">
-                        <img src="images/process.png" alt="Ups, Automation image is not available" class="table_image">
+                <div class="skills__column">
+                    <div class="skills__image-container">
+                        <img src="images/process.png" alt="Ups, Automation image is not available"
+                            class="skills__image">
                     </div>
-                    <h2 class="column_name">AQA</h2>
-                    <h3 class="skill_items_set">Automation Frameworks</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Proficiency in using Playwright for browser automation</li>
-                        <li class="skill">Understanding of how to set up and configure Playwright projects</li>
-                    </ul>
-                    <h3 class="skill_items_set">TypeScript</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Strong knowledge of TypeScript, including types, interfaces, and classes</li>
-                        <li class="skill">Ability to write clean, maintainable, and efficient code</li>
-                    </ul>
-                    <h3 class="skill_items_set">Test Design and Execution</h3>
-                    <ul class="skills_list">
-                        <li class="skill">Experience in designing, writing, and executing automated test cases</li>
-                        <li class="skill">Familiarity with test execution, reporting, and debugging</li>
-                    </ul>
+                    <h2 class="skills__column-name">AQA</h2>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Automation Frameworks</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Proficiency in using Playwright for browser automation</li>
+                            <li class="skills__skill">Understanding of how to set up and configure Playwright projects
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">TypeScript</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Strong knowledge of TypeScript, including types, interfaces, and
+                                classes
+                            </li>
+                            <li class="skills__skill">Ability to write clean, maintainable, and efficient code</li>
+                        </ul>
+                    </div>
+                    <div class="skills__item">
+                        <h3 class="skills__set">Test Design and Execution</h3>
+                        <ul class="skills__list">
+                            <li class="skills__skill">Experience in designing, writing, and executing automated test
+                                cases</li>
+                            <li class="skills__skill">Familiarity with test execution, reporting, and debugging</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             </div>
         </section>
 
         <section>
-            <div class="arrow-container">
-                <img src="images/down-arrow.png" alt="Ups, the image is broken" class="down-arrow">
+            <div class="arrow">
+                <img src="images/down-arrow.png" alt="Ups, the image is broken" class="arrow__image">
             </div>
         </section>
 
-        <form class="about-you-form" id="about_you_form">
-            <section>
-                <fieldset>
-                    <legend id="about-you-header">
-                        <img class="chat_img" src="images/speak.png" alt="Oops, the image is broken"><br> I’m excited to
-                        learn about you and your projects.<br> Ready to share some info?
-                    </legend>
+        <section class="about-you">
+            <form class="about-you__form" id="about_you_form">
+                <legend class="about-you__header">
+                    <img class="about-you__image" src="images/speak.png" alt="Oops, the image is broken">
+                    <p class="about-you__description"> I’m excited to
+                        learn about you and your projects.<br> Ready to share some info?</p>
+                </legend>
 
+                <div class="about-you__form-field">
                     <label for="name">Your name is</label>
-                    <input class="text_field" type="text" id="name" name="name" placeholder="Nataliia" minlength="2"
-                        maxlength="35" required /><br /><br />
+                    <input class="about-you__text-field" type="text" id="name" name="name" placeholder="Nataliia" minlength="2"
+                        maxlength="35" required />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="insta_nickname">Your insta nickname is</label>
-                    <input class="text_field" type="text" id="insta_nickname" name="insta_nickname"
-                        placeholder="@n_solotva" minlength="2" maxlength="70" /><br /><br />
+                    <input class="about-you__text-field" type="text" id="insta_nickname" name="insta_nickname"
+                        placeholder="@n_solotva" minlength="2" maxlength="70" />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="insta_password">Your Instagram password is</label>
-                    <input class="text_field" type="password" id="insta_password" name="insta_password"
-                        placeholder="I'm kidding! Do not enter it!" /><br /><br />
+                    <input class="about-you__text-field" type="password" id="insta_password" name="insta_password"
+                        placeholder="I'm kidding! Do not enter it!" />
+                </div>
 
-                    <label for="languages"> Choose preferred language:</label><br><br>
-                    <div id="languages">
-                        <input type="radio" id="english" name="language" value="English" />
-                        <label for="english">English</label>
-                        <input type="radio" id="french" name="language" value="French" />
-                        <label for="french">French</label>
-                        <input type="radio" id="ukrainian" name="language" value="Ukrainian" />
-                        <label for="ukrainian">Ukrainian</label>
-                        <input type="radio" id="other" name="language" value="Other"
-                            title="For any other language, I'll use a translator" />
-                        <label for="other">Other</label>
-                    </div><br />
+                <div class="about-you__form-field">
+                    <label for="languages">Choose preferred language:</label>
+                    <div class="about-you__languages">
+                        <div class="about-you__radio-option">
+                            <input type="radio" id="english" name="language" value="English" class="about-you__radio-button" />
+                            <label for="english">English</label>
+                        </div>
+                        <div class="about-you__radio-option">
+                            <input type="radio" id="french" name="language" value="French" class="about-you__radio-button" />
+                            <label for="french">French</label>
+                        </div>
+                        <div class="about-you__radio-option">
+                            <input type="radio" id="ukrainian" name="language" value="Ukrainian" class="about-you__radio-button" />
+                            <label for="ukrainian">Ukrainian</label>
+                        </div>
+                        <div class="about-you__radio-option">
+                            <input type="radio" id="other" name="language" value="Other"
+                                title="For any other language, I'll use a translator" class="about-you__radio-button" />
+                            <label for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
 
-                    <label for="devlanguages">Choose the language you cannot live without:</label><br><br>
-                    <div id="devlanguages">
-                        <input type="checkbox" id="css" name="tech_language" value="CSS" />
-                        <label for="css">CSS</label>
-                        <input type="checkbox" id="html" name="tech_language" value="HTML" />
-                        <label for="html">HTML</label>
-                        <input type="checkbox" id="js" name="tech_language" value="JavaScript" />
-                        <label for="js">JavaScript</label>
-                    </div><br />
+                <div class="about-you__form-field">
+                    <label for="devlanguages">Choose the language you cannot live without:</label>
+                    <div class="about-you__languages">
+                        <div class="about-you__checkbox-option">
+                            <input type="checkbox" id="css" name="tech_language" value="CSS" class="about-you__checkbox-button" />
+                            <label for="css">CSS</label>
+                        </div>
+                        <div class="about-you__checkbox-option">
+                            <input type="checkbox" id="html" name="tech_language" value="HTML" class="about-you__checkbox-button" />
+                            <label for="html">HTML</label>
+                        </div>
+                        <div class="about-you__checkbox-option">
+                            <input type="checkbox" id="js" name="tech_language" value="JavaScript" class="about-you__checkbox-button" />
+                            <label for="js">JavaScript</label>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="email">Enter your email:</label>
-                    <input class="text_field" type="email" id="email" name="email" placeholder="your@email.example"
-                        maxlength="255" required /><br /><br />
+                    <input class="about-you__text-field" type="email" id="email" name="email" placeholder="your@email.example"
+                        maxlength="255" required />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="country">Choose your country:</label>
-                    <select class="text_field dropdown_field" id="country" name="country">
+                    <select class="about-you__text-field about-you__drop-down" id="country" name="country">
                         <option value="">--Please choose your country--</option>
                         <option value="Canada">Canada</option>
                         <option value="United Kingdom">United Kingdom</option>
                         <option value="USA">USA</option>
                         <option value="Other country">Other country</option>
-                    </select><br /><br />
+                    </select>
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="phone">Enter your phone number:</label>
-                    <input class="text_field" type="tel" id="phone" name="phone" placeholder="e.g. +1234567890"
-                        pattern="^\+?\d{0,13}" /><br /><br />
+                    <input class="about-you__text-field" type="tel" id="phone" name="phone" placeholder="e.g. +1234567890"
+                        pattern="^\+?\d{0,13}" />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="birthdate">Select your birthdate:</label>
-                    <input class="text_field" type="date" id="birthdate" name="birthdate" /><br /><br />
+                    <input class="about-you__text-field" type="date" id="birthdate" name="birthdate" />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="file">Select an image with which I can associate you:</label>
-                    <input class="text_field file_field" type="file" id="file" name="file"
-                        accept="image/*" /><br /><br />
+                    <input class="about-you__text-field about-you__file_field" type="file" id="file" name="file" accept="image/*" />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="favcolor">Select or pick your favorite color</label>
-                    <input class="color_field" type="color" id="favcolor" name="color" value="#fd5974" required
-                        title="Choose your favorite color" /><br /><br />
+                    <input class="about-you__color-field" type="color" id="favcolor" name="color" value="#fd5974" required
+                        title="Choose your favorite color" />
+                </div>
 
+
+                <div class="about-you__form-field">
                     <label for="github_url">Could you share your GitHub url?</label>
-                    <input class="text_field" type="url" id="github_url" name="github_url"
-                        placeholder="https://github.com/NataliiaSlate" /><br /><br />
+                    <input class="about-you__text-field" type="url" id="github_url" name="github_url"
+                        placeholder="https://github.com/NataliiaSlate" />
+                </div>
 
+                <div class="about-you__form-field">
                     <label for="mark">How do you like the website so far? (0 to 10)</label>
-                    <input class="text_field" type="number" id="mark" name="mark" min="0" max="10" step="2"
-                        required><br /><br />
+                    <input class="about-you__text-field" type="number" id="mark" name="mark" min="0" max="10" step="2" required>
+                </div>
 
-                    <section class="buttons">
-                        <input type="submit" id="submit" class="submit-button" value="Submit form ❤️">
-                        <input type="reset" id="reset" class="reset-button" value="Reset form 😱"><br /><br />
-                        <input type="button" id="send_hug" name="send_hug" class="hug-button"
-                            onclick="alert('Thank you for the hug! I\'m hugging you back 🤗')" value="Send hug 🤗">
-                    </section>
-                </fieldset>
-            </section><br>
-        </form>
+                <section class="about-you__buttons">
+                    <input type="submit" id="submit" class="about-you__submit-button" value="Submit form ❤️">
+                    <input type="reset" id="reset" class="about-you__reset-button" value="Reset form 😱">
+                    <input type="button" id="send_hug" class="about-you__hug-button" name="send_hug"
+                        onclick="alert('Thank you for the hug! I\'m hugging you back 🤗')" value="Send hug 🤗">
+                </section>
+            </form>
+        </section><br>
     </main>
     <footer class="footer" id="contact_me">
-        <p id="motivation">
+        <p class="footer__motivation">
             <br>Embrace Challenges, Unlock Potential.<br>
         </p>
-        <ul class="footer_links">
+        <ul class="footer__links">
             <li>
-                <a href="mailto:nataliia.solotva@gmail.com" target="_blank" class="footer-link">
+                <a href="mailto:nataliia.solotva@gmail.com" target="_blank" class="footer__link">
                     <img src="images/mail.png" alt="Ups, Gmail link is broken">
                 </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/nataliia-solotva/" target="_blank" class="footer-link">
+                <a href="https://www.linkedin.com/in/nataliia-solotva/" target="_blank" class="footer__link">
                     <img src="images/business.png" alt="Ups, LinkedIn link is broken">
                 </a>
             </li>
             <li>
-                <a href="https://github.com/NataliiaSolotva" target="_blank" class="footer-link">
+                <a href="https://github.com/NataliiaSolotva" target="_blank" class="footer__link">
                     <img src="images/github.png" alt="Ups, GitHub link is broken">
                 </a>
             </li>

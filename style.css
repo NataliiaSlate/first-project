@@ -9,18 +9,6 @@ body {
     margin: 0;
 }
 
-.arrow-container,
-.centered-image-conteiner {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.down-arrow {
-    width: auto;
-    max-height: 50px;
-}
-
 .color-text {
     color: #fe5a75;
     background-color: rgba(236, 236, 248, 0.4);
@@ -36,19 +24,19 @@ body {
     box-sizing: border-box;
 }
 
-.logo_image {
+.header__logo-image {
     max-width: 15%;
     max-height: 15%;
     padding: 0 30px;
 }
 
-.nav {
+.header__nav {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-.nav__list {
+.header__list {
     list-style: none;
     display: flex;
     gap: 30px;
@@ -56,7 +44,7 @@ body {
     padding: 0;
 }
 
-.nav__link {
+.header__link {
     display: block;
     padding: 0 10px;
     line-height: 100%;
@@ -64,10 +52,11 @@ body {
     text-decoration: none;
     font-size: 1.5em;
 }
+
 /* end of header styles */
 
 /* self presentations section styles */
-.self_presentation {
+.about-me {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -75,213 +64,289 @@ body {
     margin: 0;
 }
 
-.girl-full-stack {
+.about-me__image {
     max-width: 50%;
     height: auto;
-    margin-right: 20px;
 }
 
-.short_description {
+.about-me__description {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     font-size: 20px;
     letter-spacing: 5px;
-    margin-bottom: 5%;
+    gap: 30px;
 }
-/* end of self presentations section styles */
 
-/* table styles */
-.set_of_skills_header {
-    font-style: italic;
+.about-me__header {
+    margin: 0;
     text-align: center;
 }
 
+.about-me__paragraph {
+    margin: 0;
+}
 
-.columns {
+/* end of self presentations section styles */
+
+/* arrow styles */
+.arrow,
+.centered-image-conteiner {
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+}
+
+.arrow__image {
+    width: auto;
+    max-height: 50px;
+}
+
+/* end arrow styles */
+
+/* table styles */
+.skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills__header {
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
+
+.skills__tabel {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    gap: 15px;
 }
 
-.column {
+.skills__column {
     background-color: rgba(249, 249, 249, 0.5);
     padding: 20px;
-    margin: 5px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     box-shadow: 0 2px 4px rgba(254, 90, 117, 0.4);
     border-radius: 10px;
 }
 
-.column_name {
+.skills__column-name {
     background-color: #644f88;
     color: white;
     word-spacing: 10px;
     font-size: 1.2em;
     padding: 10px;
     text-align: center;
+    margin: 0;
 }
 
-.table_image_container {
+.skills__image-container {
     display: flex;
     justify-content: center;
 }
 
-.table_image {
-    width: 20%; 
+.skills__image {
+    width: 20%;
     height: auto;
     max-width: 100px;
-    max-height: 100px; 
+    max-height: 100px;
 }
 
-.skill_items_set {
+.skills__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills__set {
     background-color: #b4b0fa;
     font-size: 1.1em;
     text-align: center;
+    margin: 0;
 }
 
-.skills_list {
+.skills__list {
     list-style: none;
+    margin: 0;
     padding: 0;
     align-content: space-between;
     max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.skill {
-    margin: 15px 0;
-}
 /* end of table styles */
 
 /* about visitor section style */
-.about-you-form {
+.about-you {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.about-you__form {
     background: rgba(249, 249, 249, 0.4);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(254, 90, 117, 0.4);
-    padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-fieldset {
-    border: none;
-}
-
-#about-you-header {
+.about-you__header {
     background-color: rgba(255, 73, 103, 0.4);
     color: rgba(255, 255, 255, 1);
     letter-spacing: 5px;
     font-size: 18px;
     text-align: center;
-    margin-bottom: 20px;
     box-shadow: 0 2px 4px rgba(254, 90, 117, 0.4);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 
-.chat_img {
+.about-you__image {
     max-width: 80px;
     height: auto;
-    margin: 10px;
+    padding: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.about-you__description {
+    margin: 0;
+    padding-bottom: 10px;
 }
 
-.text_field{
+.about-you__form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.about-you__text-field {
     width: calc(100% - 22px);
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #fff;
     border-radius: 5px;
-    box-shadow: 0 0 5px 1px rgba(254, 90, 117, 0.1);  
+    box-shadow: 0 0 5px 1px rgba(254, 90, 117, 0.1);
     font-size: 0.9em;
 }
 
-#languages, #devlanguages {
+.about-you__languages {
     display: flex;
-    gap: 10px;
     flex-direction: row;
-    align-items: center;
-    align-content: center;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
-.file_field {
+.about-you__radio-option,
+.about-you__checkbox-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-align: center;
+}
+
+.about-you__checkbox-button,
+.about-you__radio-button {
+    accent-color: rgba(253, 89, 116, 1);
+    margin: 0;
+    align-items: center;
+}
+
+.about-you__file_field {
     background: #fff;
     cursor: pointer;
 }
 
-.color_field {
+.about-you__color-field {
     width: 100%;
     height: 50px;
     border: none;
     border-radius: 5px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
-.dropdown_field {
+.about-you__drop-down {
     width: 100%;
 }
 
-.buttons {
+.about-you__buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 30px 50px;
 }
 
-.reset-button,
-.submit-button,
-.hug-button {
+.about-you__reset-button,
+.about-you__submit-button,
+.about-you__hug-button {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin: 0 20px;
 }
 
-.reset-button {
+.about-you__reset-button {
     background-color: rgba(254, 90, 117, 1);
     color: #ffffff;
 }
 
-.reset-button:hover {
+.about-you__reset-button:hover {
     background-color: #ec0b0b;
 }
 
-.submit-button {
+.about-you__submit-button {
     background-color: rgba(254, 90, 117, 1);
     color: #ffffff;
 }
 
-.submit-button:hover {
+.about-you__submit-button:hover {
     background-color: #1ebf1c;
 }
 
-.hug-button {
+.about-you__hug-button {
     background-color: rgba(254, 90, 117, 1);
     color: #ffffff;
 }
 
-.hug-button:hover {
+.about-you__hug-button:hover {
     background-color: rgba(254, 90, 117, 0.5);
 }
+
 /* end of about visitor section style */
 
 /* footer styles */
 .footer {
     background-color: rgba(254, 90, 117, 1);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
 }
 
-#motivation {
+.footer__motivation {
     color: #000000;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-style: italic;
     text-align: center;
+    margin: 0;
 }
 
-.footer_links {
+.footer__links {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -290,13 +355,14 @@ label {
     padding: 0;
 }
 
-.footer-link img {
+.footer__link img {
     width: 40px;
     height: auto;
     transition: transform 0.5s;
 }
 
-.footer-link img:hover {
-    transform: scale(1.2);
+.footer__link img:hover {
+    transform: scale(2);
 }
-/* end of footer styles */
+
+/* end of footer styles  */
