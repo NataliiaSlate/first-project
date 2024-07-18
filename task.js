@@ -41,7 +41,10 @@ console.log("--------------------1-------------------");
 //1. - Create an array of movie titles
 
 console.log(filmsInfo);
-console.log(filmsInfo.map((film) => film.title));
+console.log(
+    "result:",
+    filmsInfo.map((film) => film.title)
+);
 console.log(filmsInfo);
 
 console.log("--------------------2-------------------");
@@ -49,7 +52,10 @@ console.log("--------------------2-------------------");
 // 2. - Create an array of movies with a rating higher than 8.5. -> changed to 8.7 rating to see the differance
 
 console.log(filmsInfo);
-console.log(filmsInfo.filter((film) => film.rating > 8.7));
+console.log(
+    "result:",
+    filmsInfo.filter((film) => film.rating > 8.7)
+);
 console.log(filmsInfo);
 
 console.log("--------------------3-------------------");
@@ -57,7 +63,10 @@ console.log("--------------------3-------------------");
 // 3. - Sort the movies by rating in descending order.
 
 console.log(filmsInfo);
-console.log(filmsInfo.sort((a, b) => (a.rating > b.rating ? -1 : 1)));
+console.log(
+    "result:",
+    filmsInfo.sort((a, b) => (a.rating > b.rating ? -1 : 1))
+);
 console.log(filmsInfo);
 
 console.log("--------------------4-------------------");
@@ -65,7 +74,10 @@ console.log("--------------------4-------------------");
 // 4. - Create an array of movies released after the year 2000.
 
 console.log(filmsInfo);
-console.log(filmsInfo.filter((film) => film.year > 2000));
+console.log(
+    "result:",
+    filmsInfo.filter((film) => film.year > 2000)
+);
 console.log(filmsInfo);
 
 console.log("--------------------5-------------------");
@@ -73,7 +85,10 @@ console.log("--------------------5-------------------");
 // 5. - [ ] Sort the movies by year of release in ascending order.
 
 console.log(filmsInfo);
-console.log(filmsInfo.sort((a, b) => (a.year > b.year ? 1 : -1)));
+console.log(
+    "result:",
+    filmsInfo.sort((a, b) => b.year - a.year)
+);
 console.log(filmsInfo);
 
 console.log("--------------------6-------------------");
@@ -88,7 +103,7 @@ const genreCount = filmsInfo.reduce((acc, film) => {
 }, {});
 
 console.log(filmsInfo);
-console.log(genreCount);
+console.log("result:", genreCount);
 console.log(filmsInfo);
 
 console.log("--------------------7-------------------");
@@ -96,7 +111,10 @@ console.log("--------------------7-------------------");
 // 7. - [ ] Check if all movies have a rating higher than 7.
 
 console.log(filmsInfo);
-console.log(filmsInfo.every((film) => film.rating > 7));
+console.log(
+    "result:",
+    filmsInfo.every((film) => film.rating > 7)
+);
 console.log(filmsInfo);
 
 console.log("--------------------8-------------------");
@@ -104,8 +122,13 @@ console.log("--------------------8-------------------");
 // 8. - [ ] Calculate the average rating of all movies.
 
 console.log(filmsInfo);
+
 console.log(
-    filmsInfo.reduce((acc, film) => acc + film.rating, 0) / filmsInfo.length
+    "result:",
+    filmsInfo.reduce(
+        (acc, film, index, array) => acc + film.rating / array.length,
+        0
+    )
 );
 console.log(filmsInfo);
 
@@ -115,9 +138,10 @@ console.log("--------------------9-------------------");
 
 console.log(filmsInfo);
 console.log(
-    filmsInfo.map((film) => ({
-        title: film.title,
-        rating: film.rating,
+    "result:",
+    filmsInfo.map(({ title, rating }) => ({
+        title,
+        rating,
     }))
 );
 console.log(filmsInfo);
@@ -127,7 +151,10 @@ console.log("--------------------10------------------");
 // 10. - [ ] Check if there is at least one movie in the "Sci-Fi" genre.
 
 console.log(filmsInfo);
-console.log(filmsInfo.some((film) => film.genre.includes("Sci-Fi")));
+console.log(
+    "result:",
+    filmsInfo.some((film) => film.genre.includes("Sci-Fi"))
+);
 console.log(filmsInfo);
 
 console.log("--------------------11------------------");
@@ -135,7 +162,10 @@ console.log("--------------------11------------------");
 // 11. - [ ] Check if there is at least one movie directed by "Quentin Tarantino".
 
 console.log(filmsInfo);
-console.log(filmsInfo.some((film) => film.director === "Quentin Tarantino"));
+console.log(
+    "result:",
+    filmsInfo.some((film) => film.director === "Quentin Tarantino")
+);
 console.log(filmsInfo);
 
 console.log("--------------------12------------------");
@@ -143,7 +173,10 @@ console.log("--------------------12------------------");
 // 12. - [ ] Check if all movies were released after 1990.
 
 console.log(filmsInfo);
-console.log(filmsInfo.every((film) => film.year > 1990));
+console.log(
+    "result:",
+    filmsInfo.every((film) => film.year > 1990)
+);
 console.log(filmsInfo);
 
 console.log("--------------------13------------------");
@@ -152,29 +185,29 @@ console.log("--------------------13------------------");
 
 console.log(filmsInfo);
 console.log(
+    "result:",
     filmsInfo
         .filter(
             (film) => film.director === "Christopher Nolan" && film.rating > 8.5
         )
         .map((film) => film.title)
-        .sort((a, b) => (a.rating - b.rating ? -1 : 1))
+        .sort((a, b) => b.rating - a.rating)
 );
 console.log(filmsInfo);
 
 console.log("--------------------14------------------");
 
 // 14. - [ ] Calculate the average rating of movies released before the year 2000 that belong to the "Drama" genre.
-const filteredMovies = filmsInfo.filter(
-    (film) => film.year < 2000 && film.genre.includes("Drama")
-);
-
 console.log(filmsInfo);
-console.log(filteredMovies);
 console.log(
-    (
-        filteredMovies.reduce((acc, film) => acc + film.rating, 0) /
-        filteredMovies.length
-    ).toFixed(2)
+    "result:",
+    filmsInfo
+        .filter((film) => film.year < 2000 && film.genre.includes("Drama"))
+        .reduce(
+            (acc, film, index, array) => acc + film.rating / array.length,
+            0
+        )
+        .toFixed(2)
 );
 console.log(filmsInfo);
 
@@ -184,6 +217,7 @@ console.log("--------------------15------------------");
 
 console.log(filmsInfo);
 console.log(
+    "result:",
     filmsInfo
         .filter((film) => film.rating > 8.5)
         .map((film) => film.title)
@@ -196,18 +230,19 @@ console.log("---------------------16------------------");
 // 16. - [ ] Find the total number of genres covered by movies with a rating higher than 8.8.
 
 console.log(filmsInfo);
-
-const genresArray = [];
-filmsInfo
-    .filter((film) => film.rating > 8.8)
-    .forEach((film) => {
-        film.genre.forEach((genre) => {
-            if (!genresArray.includes(genre)) {
-                genresArray.push(genre);
-            }
-        });
-    });
-console.log(genresArray);
+console.log(
+    "result:",
+    filmsInfo
+        .filter((film) => film.rating > 8.8)
+        .reduce((acc, film) => {
+            film.genre.forEach((genre) => {
+                if (!acc.includes(genre)) {
+                    acc.push(genre);
+                }
+            });
+            return acc;
+        }, []).length
+);
 console.log(filmsInfo);
 
 console.log("--------------------17------------------");
@@ -215,7 +250,10 @@ console.log("--------------------17------------------");
 // 17. - [ ] Check if there is at least one movie in the dataset with a rating higher than 9.
 
 console.log(filmsInfo);
-console.log(filmsInfo.some((film) => film.rating > 9));
+console.log(
+    "result:",
+    filmsInfo.some((film) => film.rating > 9)
+);
 console.log(filmsInfo);
 
 console.log("--------------------18------------------");
@@ -224,6 +262,7 @@ console.log("--------------------18------------------");
 
 console.log(filmsInfo);
 console.log(
+    "result:",
     filmsInfo
         .filter((film) => film.director === "Christopher Nolan")
         .every((film) => film.rating > 8.5)
