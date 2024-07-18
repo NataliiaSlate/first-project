@@ -65,7 +65,7 @@ console.log("--------------------3-------------------");
 console.log(filmsInfo);
 console.log(
     "result:",
-    filmsInfo.sort((a, b) => (a.rating > b.rating ? -1 : 1))
+    filmsInfo.sort((a, b) => (b.rating > a.rating))
 );
 console.log(filmsInfo);
 
@@ -221,7 +221,7 @@ console.log(
     filmsInfo
         .filter((film) => film.rating > 8.5)
         .map((film) => film.title)
-        .sort((a, b) => (a.year - b.year ? -1 : 1))
+        .sort((a, b) => (b.year - a.year))
 );
 console.log(filmsInfo);
 
