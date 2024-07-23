@@ -1,4 +1,4 @@
-async function getListOfBrands() {
+const getListOfBrands = async () => {
     const url = "https://staging.hlodan.com/brands";
 
     const response = await fetch(url);
@@ -6,9 +6,9 @@ async function getListOfBrands() {
 
     console.log("List of brands:", brands);
     return brands;
-}
+};
 
-async function chooseRandomNumber(min, max, count = 2) {
+const chooseRandomNumber = async (min, max, count = 2) => {
     const randomNumbers = [];
     let num;
 
@@ -21,9 +21,9 @@ async function chooseRandomNumber(min, max, count = 2) {
 
     console.log("Random numbers list:", randomNumbers.sort());
     return randomNumbers.sort();
-}
+};
 
-async function chooseRandomBrands(brandsList, randomNumbers) {
+const chooseRandomBrands = async (brandsList, randomNumbers) => {
     const brands = [];
     for (const index of randomNumbers) {
         let brand = brandsList[index];
@@ -45,9 +45,9 @@ async function chooseRandomBrands(brandsList, randomNumbers) {
 
     console.log("Random brands:", brands);
     return brands;
-}
+};
 
-async function getBrandDetails(brandName) {
+const getBrandDetails = async (brandName) => {
     const options = {
         method: "GET",
         headers: {
@@ -68,9 +68,9 @@ async function getBrandDetails(brandName) {
         console.error(err);
         return null;
     }
-}
+};
 
-async function displayBrandDetails() {
+const displayBrandDetails = async () => {
     const brandsList = await getListOfBrands();
     const randomNumbers = await chooseRandomNumber(0, brandsList.length - 1, 5);
     const randomBrands = await chooseRandomBrands(brandsList, randomNumbers);
@@ -98,6 +98,6 @@ async function displayBrandDetails() {
             mainElement.appendChild(brandElement);
         }
     });
-}
+};
 
 document.addEventListener("DOMContentLoaded", displayBrandDetails);
