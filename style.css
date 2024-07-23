@@ -3,10 +3,17 @@ html {
     font-size: 18px;
 }
 
+main {
+    flex: 1;
+}
+
 body {
     background-image: url(images/background-image.jpg);
     background-size: cover;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .color-text {
@@ -332,6 +339,47 @@ body {
 
 /* end of about visitor section style */
 
+/* brand details page styles */
+.brand-details {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+}
+.brand-details__logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-details__logo {
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.brand-details__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.brand-details__name {
+    margin: 0;
+}
+
+.brand-details__description {
+    margin: 0;
+}
+/* end of brand details page styles */
+
 /* footer styles */
 .footer {
     background-color: rgba(254, 90, 117, 1);
@@ -340,6 +388,7 @@ body {
     flex-direction: column;
     gap: 30px;
     padding: 20px 0;
+    flex-shrink: 0;
 }
 
 .footer__motivation {
