@@ -28,6 +28,16 @@ class Circle {
         this.color = new Helper().generateRandomColor();
     }
 
+    createCircle() {
+        circle(this.x, this.y, this.size);
+    }
+
+    fillColor() {
+        fill(
+            `rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, 0.5)`
+        );
+    }
+
     moveCircle() {
         this.x += this.stepsX;
         this.y += this.stepsY;
@@ -40,22 +50,14 @@ class Circle {
             this.stepsY *= -1;
         }
     }
-
-    fillColor() {
-        fill(`rgba(${this.color[0]}, ${this.color[1]}, ${this.color[2]}, 0.25)`);
-    }
-
-    createCircle() {
-        circle(this.x, this.y, this.size);
-    }
 }
 
 let circles = [];
-const numberOfCircles = 1;
+const numberOfCircles = 20;
 const helper = new Helper();
 
 function preload() {
-    background = loadImage('../images/background-image.jpg');
+    background = loadImage("../images/background-image.jpg");
 }
 
 function setup() {
@@ -64,7 +66,7 @@ function setup() {
     for (let i = 0; i < numberOfCircles; i++) {
         const x = helper.generateRandomNumber(0, width);
         const y = helper.generateRandomNumber(0, height);
-        const size = helper.generateRandomNumber(15, 130);
+        const size = helper.generateRandomNumber(height / 10, width / 5);
         const stepsX = helper.generateRandomNumber(-1, 5);
         const stepsY = helper.generateRandomNumber(-1, 5);
         circles.push(new Circle(x, y, size, stepsX, stepsY));
