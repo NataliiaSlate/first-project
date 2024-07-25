@@ -44,10 +44,12 @@ class Circle {
 
         if (this.x > width || this.x < 0) {
             this.stepsX *= -1;
+            this.color = new Helper().generateRandomColor();
         }
 
         if (this.y > height || this.y < 0) {
             this.stepsY *= -1;
+            this.color = new Helper().generateRandomColor();
         }
     }
 }
