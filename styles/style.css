@@ -8,7 +8,7 @@ main {
 }
 
 body {
-    background-image: url(images/background-image.jpg);
+    background-image: url(../images/background-image.jpg);
     background-size: cover;
     margin: 0;
     display: flex;
