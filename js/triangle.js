@@ -7,8 +7,7 @@ class Triangle extends Shape {
     draw() {
         const height = (Math.sqrt(3) / 2) * this.size;
 
-        this.move();
-        this.fillColor();
+        super.draw();
         triangle(
             this.x,
             this.y - (2 / 3) * height,

@@ -7,8 +7,7 @@ class Square extends Shape {
     }
 
     draw() {
-        this.fillColor();
-        this.move();
+        super.draw();
         square(this.x - this.size / 2, this.y - this.size / 2, this.size);
     }
 }

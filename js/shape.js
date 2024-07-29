@@ -44,4 +44,9 @@ class Shape {
             ];
         }
     }
+
+    draw() {
+        this.fillColor();
+        this.move();
+    }
 }

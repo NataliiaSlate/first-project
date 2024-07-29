@@ -6,8 +6,7 @@ class Circle extends Shape {
     }
 
     draw() {
-        this.fillColor();
-        this.move();
+        super.draw();
         circle(this.x, this.y, this.size);
     }
 }
