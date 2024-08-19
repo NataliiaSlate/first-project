@@ -24,15 +24,15 @@ type User = Admin | Moderator | RegularUser;
 // 3. Type Guards
 
 function isAdmin(user: User): user is Admin {
-    return (user as Admin).createUser !== undefined;
+    return 'createUser' in user;
 }
 
 function isModerator(user: User): user is Moderator {
-    return (user as Moderator).banUser !== undefined;
+    return 'banUser' in user;
 }
 
 function isRegularUser(user: User): user is RegularUser {
-    return (user as RegularUser).viewContent !== undefined;
+    return 'viewContent' in user;
 }
 
 // 4.	User Management Functions:
