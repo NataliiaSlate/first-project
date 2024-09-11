@@ -19,25 +19,25 @@ interface RegularUser extends UserType {
 
 // 2. Union type for users
 
-type User = Admin | Moderator | RegularUser;
+type NewUser = Admin | Moderator | RegularUser;
 
 // 3. Type Guards
 
-function isAdmin(user: User): user is Admin {
+function isAdmin(user: NewUser): user is Admin {
     return 'createUser' in user;
 }
 
-function isModerator(user: User): user is Moderator {
+function isModerator(user: NewUser): user is Moderator {
     return 'banUser' in user;
 }
 
-function isRegularUser(user: User): user is RegularUser {
+function isRegularUser(user: NewUser): user is RegularUser {
     return 'viewContent' in user;
 }
 
 // 4.	User Management Functions:
 
-const performAdminTask = (user: User, task: () => void): void => {
+const performAdminTask = (user: NewUser, task: () => void): void => {
     if (isAdmin(user)) {
         task();
     } else {
@@ -45,7 +45,7 @@ const performAdminTask = (user: User, task: () => void): void => {
     }
 };
 
-const moderateContent = (user: User, contentId: string): void => {
+const moderateContent = (user: NewUser, contentId: string): void => {
     if (isModerator(user)) {
         user.banUser(contentId);
     } else {
@@ -53,7 +53,7 @@ const moderateContent = (user: User, contentId: string): void => {
     }
 };
 
-const viewContentAsUser = (user: User): void => {
+const viewContentAsUser = (user: NewUser): void => {
     if (isRegularUser(user)) {
         user.viewContent();
     } else {
