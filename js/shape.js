@@ -4,6 +4,7 @@ class Shape {
     size;
     stepsX;
     stepsY;
+    color;
 
     constructor(x, y, size, stepsX, stepsY) {
         this.x = x;
